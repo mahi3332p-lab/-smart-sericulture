@@ -1,0 +1,501 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Smart Sericulture Farmer</title>
+
+<style>
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f2f8f1;
+  color: #263b2a;
+  line-height: 1.6;
+}
+
+header {
+  background: linear-gradient(120deg,#14532d,#3b9b55);
+  color: white;
+  text-align: center;
+  padding: 28px 15px;
+}
+
+header h1 {
+  font-size: 27px;
+}
+
+nav {
+  background: #174d2b;
+  padding: 12px;
+  text-align: center;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 8px;
+  font-size: 14px;
+}
+
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 18px;
+}
+
+.hero {
+  background: linear-gradient(120deg,#d9f4d5,#eff9e9);
+  padding: 30px 20px;
+  border-radius: 15px;
+  text-align: center;
+  margin: 15px 0;
+}
+
+.hero h2 {
+  color: #17632f;
+  font-size: 25px;
+}
+
+button, select {
+  padding: 11px 15px;
+  border: none;
+  border-radius: 8px;
+  margin: 5px;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+button {
+  background: #238442;
+  color: white;
+}
+
+button:hover {
+  background: #14532d;
+}
+
+select, input {
+  border: 1px solid #aaa;
+  background: white;
+}
+
+input {
+  padding: 12px;
+  border-radius: 8px;
+  width: 100%;
+  margin: 8px 0;
+}
+
+.section {
+  background: white;
+  padding: 20px;
+  border-radius: 13px;
+  margin: 18px 0;
+  box-shadow: 0 3px 12px #00000010;
+}
+
+.section h2 {
+  color: #24783d;
+  margin-bottom: 12px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns:
+  repeat(auto-fit,minmax(210px,1fr));
+  gap: 15px;
+}
+
+.card {
+  background: #f0f8ee;
+  padding: 18px;
+  border-radius: 12px;
+  border-left: 5px solid #3b9b55;
+}
+
+.card h3 {
+  color: #17632f;
+  margin-bottom: 8px;
+}
+
+#answer {
+  background: #eff8ed;
+  padding: 15px;
+  border-radius: 10px;
+  margin-top: 12px;
+  white-space: pre-wrap;
+}
+
+footer {
+  background: #174d2b;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 25px;
+}
+
+.small {
+  color: #666;
+  font-size: 13px;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>🌿 Smart Sericulture Farmer</h1>
+<p>Smart Technology for Healthy Silk Farming</p>
+<p>స్మార్ట్ పట్టు పరిశ్రమ రైతు సహాయకుడు</p>
+</header>
+
+<nav>
+<a href="#home">Home</a>
+<a href="#about">About</a>
+<a href="#mulberry">Mulberry</a>
+<a href="#silkworm">Silkworm</a>
+<a href="#assistant">AI Assistant</a>
+</nav>
+
+<div class="container">
+
+<section class="hero" id="home">
+<h2>Welcome to Smart Sericulture</h2>
+<p>
+Learn modern sericulture techniques,
+mulberry cultivation, silkworm rearing
+and cocoon production.
+</p>
+<br>
+
+<label for="language">Choose Language:</label>
+<select id="language" onchange="changeLanguage()">
+<option value="en">English</option>
+<option value="te">తెలుగు</option>
+</select>
+
+</section>
+
+<section class="section" id="about">
+<h2>🌱 About Sericulture</h2>
+<p>
+Sericulture is the scientific process of
+rearing silkworms for the production of silk.
+It includes mulberry cultivation, silkworm
+rearing, cocoon harvesting and silk processing.
+</p>
+</section>
+
+<section class="section" id="mulberry">
+<h2>🌳 Mulberry Cultivation</h2>
+
+<div class="cards">
+<div class="card">
+<h3>Soil</h3>
+<p>Mulberry grows well in fertile,
+well-drained soil.</p>
+</div>
+
+<div class="card">
+<h3>Irrigation</h3>
+<p>Provide suitable irrigation
+according to soil and weather conditions.</p>
+</div>
+
+<div class="card">
+<h3>Fertilizers</h3>
+<p>Use soil-test-based organic
+and recommended fertilizers.</p>
+</div>
+
+<div class="card">
+<h3>Plant Protection</h3>
+<p>Monitor pests and diseases
+regularly and follow safe management.</p>
+</div>
+</div>
+</section>
+
+<section class="section" id="silkworm">
+<h2>🐛 Silkworm Rearing</h2>
+
+<div class="cards">
+<div class="card">
+<h3>Egg Stage</h3>
+<p>Silkworm life begins from eggs.</p>
+</div>
+
+<div class="card">
+<h3>Larval Stage</h3>
+<p>Silkworm larvae feed on fresh
+mulberry leaves.</p>
+</div>
+
+<div class="card">
+<h3>Chrysalis / Pupa</h3>
+<p>The silkworm develops inside
+the cocoon into a pupa.</p>
+</div>
+
+<div class="card">
+<h3>Moth Stage</h3>
+<p>An adult moth emerges from
+the cocoon.</p>
+</div>
+</div>
+</section>
+
+<section class="section">
+<h2>📚 Important Sericulture Practices</h2>
+<ul>
+<li>Maintain a clean rearing room.</li>
+<li>Provide fresh and suitable mulberry leaves.</li>
+<li>Maintain recommended temperature and humidity.</li>
+<li>Clean rearing equipment regularly.</li>
+<li>Observe silkworm health every day.</li>
+<li>Harvest mature cocoons at the correct time.</li>
+</ul>
+</section>
+
+<section class="section" id="assistant">
+<h2>🤖 Smart Sericulture Assistant</h2>
+<p>
+Ask questions about sericulture in English
+or Telugu.
+</p>
+
+<input
+type="text"
+id="question"
+placeholder="Ask about mulberry, silkworm, cocoons..."
+>
+
+<button onclick="askQuestion()">Search Answer</button>
+<button onclick="startVoice()">🎤 Voice Search</button>
+
+<div id="answer">
+Your answer will appear here.
+</div>
+
+<br>
+<button onclick="speakAnswer()">🔊 Listen to Answer</button>
+<button onclick="stopSpeech()">⏹ Stop Voice</button>
+</section>
+
+<section class="section">
+<h2>📞 Farmer Awareness</h2>
+<p>
+Farmers can contact their nearest
+Sericulture Department office for
+technical guidance, training and
+government scheme information.
+</p>
+</section>
+
+</div>
+
+<footer>
+<p>Smart Sericulture Farmer Project</p>
+<p>Technology for Better Silk Production 🌿</p>
+</footer>
+
+<script>
+
+const knowledge = [
+
+{
+keys:["sericulture","పట్టు పరిశ్రమ"],
+en:"Sericulture is the rearing of silkworms for silk production. It includes mulberry cultivation, silkworm rearing and cocoon harvesting.",
+te:"పట్టు పురుగులను పెంచి పట్టును ఉత్పత్తి చేసే విధానాన్ని సెరికల్చర్ లేదా పట్టు పరిశ్రమ అంటారు."
+},
+
+{
+keys:["mulberry","మల్బరీ","మల్బరి"],
+en:"Mulberry is the main food plant of mulberry silkworms. Healthy leaves are important for good silkworm growth.",
+te:"మల్బరీ ఆకులు పట్టు పురుగులకు ప్రధాన ఆహారం. మంచి నాణ్యత కలిగిన ఆకులు పురుగుల పెరుగుదలకు సహాయపడతాయి."
+},
+
+{
+keys:["silkworm","పట్టు పురుగు"],
+en:"Silkworms pass through four stages: egg, larva, pupa and adult moth.",
+te:"పట్టు పురుగు నాలుగు దశల గుండా అభివృద్ధి చెందుతుంది: గుడ్డు, లార్వా, ప్యూపా మరియు వయోజన సీతాకోకచిలుక లాంటి మాత్."
+},
+
+{
+keys:["cocoon","కోకూన్","గూడు"],
+en:"A cocoon is a protective silk covering spun by a mature silkworm before the pupal stage.",
+te:"పూర్తిగా పెరిగిన పట్టు పురుగు ప్యూపా దశకు ముందు తన చుట్టూ తయారు చేసుకునే పట్టుదారపు రక్షణ కవచాన్ని కోకూన్ అంటారు."
+},
+
+{
+keys:["temperature","ఉష్ణోగ్రత"],
+en:"Silkworms need suitable temperature and humidity. Requirements vary with the silkworm breed and rearing stage. Follow local technical recommendations.",
+te:"పట్టు పురుగులకు సరైన ఉష్ణోగ్రత మరియు తేమ అవసరం. పురుగు జాతి మరియు పెరుగుదల దశను బట్టి అవసరాలు మారుతాయి."
+},
+
+{
+keys:["disease","వ్యాధి"],
+en:"Common silkworm diseases include grasserie, flacherie, muscardine and pebrine. Maintain hygiene and consult a sericulture expert for diagnosis.",
+te:"పట్టు పురుగులలో గ్రాసరీ, ఫ్లాచరీ, మస్కార్డిన్ మరియు పెబ్రిన్ వంటి వ్యాధులు కనిపిస్తాయి. పరిశుభ్రత పాటించి నిపుణులను సంప్రదించండి."
+},
+
+{
+keys:["leaves","ఆకులు"],
+en:"Feed silkworms fresh, clean and suitable mulberry leaves according to their age and rearing stage.",
+te:"పట్టు పురుగుల వయస్సు మరియు దశను బట్టి తాజా, శుభ్రమైన మల్బరీ ఆకులను అందించాలి."
+},
+
+{
+keys:["egg","గుడ్డు"],
+en:"The egg is the first stage of the silkworm life cycle. Healthy eggs hatch into larvae under suitable conditions.",
+te:"పట్టు పురుగు జీవిత చక్రంలో మొదటి దశ గుడ్డు. సరైన పరిస్థితుల్లో గుడ్ల నుంచి లార్వాలు బయటకు వస్తాయి."
+},
+
+{
+keys:["fertilizer","ఎరువు"],
+en:"Use fertilizers based on soil testing and local agricultural recommendations for healthy mulberry plants.",
+te:"మల్బరీ మొక్కల ఆరోగ్యకరమైన పెరుగుదలకు నేల పరీక్ష ఆధారంగా ఎరువులు ఉపయోగించాలి."
+},
+
+{
+keys:["harvest","పంట","కోకూన్ సేకరణ"],
+en:"Harvest mature cocoons at the recommended time after spinning is complete. Follow local sericulture department guidance.",
+te:"పట్టు పురుగులు గూళ్లు తయారు చేయడం పూర్తయిన తరువాత సూచించిన సమయంలో కోకూన్లను సేకరించాలి."
+}
+
+];
+
+function askQuestion() {
+
+let q = document.getElementById("question")
+.value.toLowerCase().trim();
+
+let lang = document.getElementById("language").value;
+
+let output = document.getElementById("answer");
+
+if(!q) {
+output.innerText = "Please type a question first.";
+return;
+}
+
+let result = knowledge.find(item =>
+item.keys.some(key => q.includes(key.toLowerCase()))
+);
+
+if(result) {
+output.innerText = lang === "te"
+? result.te
+: result.en;
+}
+else {
+output.innerText = lang === "te"
+? "క్షమించండి. ఈ ప్రశ్నకు సమాచారం అందుబాటులో లేదు. దయచేసి మల్బరీ, పట్టు పురుగులు, కోకూన్లు లేదా సెరికల్చర్ గురించి అడగండి."
+: "Sorry, I don't have a matching answer yet. Try asking about mulberry, silkworms, cocoons, diseases or sericulture.";
+}
+
+}
+
+function startVoice() {
+
+const SpeechRecognition =
+window.SpeechRecognition ||
+window.webkitSpeechRecognition;
+
+if(!SpeechRecognition) {
+alert("Voice search is not supported in this browser. Try Chrome.");
+return;
+}
+
+let recognition = new SpeechRecognition();
+
+recognition.lang =
+document.getElementById("language").value === "te"
+? "te-IN"
+: "en-IN";
+
+recognition.onresult = function(event) {
+document.getElementById("question").value =
+event.results[0][0].transcript;
+
+askQuestion();
+};
+
+recognition.onerror = function() {
+alert("Voice recognition failed. Please try again.");
+};
+
+recognition.start();
+
+}
+
+function speakAnswer() {
+
+let text = document.getElementById("answer").innerText;
+
+if(!window.speechSynthesis) {
+alert("Speech is not supported in this browser.");
+return;
+}
+
+speechSynthesis.cancel();
+
+let speech = new SpeechSynthesisUtterance(text);
+
+speech.lang =
+document.getElementById("language").value === "te"
+? "te-IN"
+: "en-IN";
+
+speech.rate = 0.9;
+
+speechSynthesis.speak(speech);
+
+}
+
+function stopSpeech() {
+speechSynthesis.cancel();
+}
+
+function changeLanguage() {
+
+let lang = document.getElementById("language").value;
+
+document.documentElement.lang = lang;
+
+if(lang === "te") {
+document.querySelector(".hero h2").innerText =
+"స్మార్ట్ సెరికల్చర్‌కు స్వాగతం";
+
+document.getElementById("question").placeholder =
+"మల్బరీ, పట్టు పురుగులు, కోకూన్ల గురించి అడగండి...";
+} else {
+document.querySelector(".hero h2").innerText =
+"Welcome to Smart Sericulture";
+
+document.getElementById("question").placeholder =
+"Ask about mulberry, silkworm, cocoons...";
+}
+
+}
+
+document.getElementById("question")
+.addEventListener("keydown", function(e) {
+if(e.key === "Enter") askQuestion();
+});
+
+</script>
+
+</body>
+</html>
